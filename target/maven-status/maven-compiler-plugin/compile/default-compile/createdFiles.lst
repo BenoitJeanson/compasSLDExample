@@ -1,0 +1,11 @@
+com\powsybl\cse\model\Bay.class
+com\powsybl\cse\model\Terminal.class
+com\powsybl\cse\model\VoltageLevel.class
+com\powsybl\cse\SCD2SLD.class
+com\powsybl\cse\model\ConductingEquipment$CEType.class
+com\powsybl\cse\model\ConnectivityNode.class
+com\powsybl\cse\SCDParser.class
+com\powsybl\cse\Substation.class
+com\powsybl\cse\model\ConductingEquipment.class
+com\powsybl\cse\SLDGenerator.class
+com\powsybl\cse\model\Substation.class
