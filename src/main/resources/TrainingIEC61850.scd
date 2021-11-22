@@ -168,7 +168,7 @@
                 <ConnectivityNode pathName="AA1/J1/Bay A/L3" name="L3"/>
             </Bay>
             <Bay sxy:x="6" sxy:y="6" name="Bay B" desc="Feld B">
-                <ConductingEquipment type="AAA" sxy:x="1" sxy:y="1" name="QB1">
+                <ConductingEquipment type="DIS" sxy:x="1" sxy:y="1" name="QB1">
                     <Terminal name="T1" connectivityNode="AA1/J1/BusBar B/L1" substationName="AA1" voltageLevelName="J1" bayName="BusBar B" cNodeName="L1" txy:actTerm="1"/>
                     <Terminal name="T2" connectivityNode="AA1/J1/Bay B/L1" substationName="AA1" voltageLevelName="J1" bayName="Bay B" cNodeName="L1" txy:actTerm="2"/>
                 </ConductingEquipment>

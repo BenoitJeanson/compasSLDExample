@@ -14,26 +14,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import javax.imageio.stream.FileCacheImageOutputStream;
 
 import com.powsybl.cse.model.CEType;
 import com.powsybl.cse.model.Substation;
 import com.powsybl.cse.model.Terminal;
 import com.powsybl.cse.model.VoltageLevel;
 import com.powsybl.sld.RawGraphBuilder;
-import com.powsybl.sld.VoltageLevelDiagram;
 import com.powsybl.sld.RawGraphBuilder.VoltageLevelBuilder;
 import com.powsybl.sld.layout.BlockOrganizer;
 import com.powsybl.sld.layout.ImplicitCellDetector;
 import com.powsybl.sld.layout.LayoutParameters;
 import com.powsybl.sld.layout.PositionVoltageLevelLayout;
-import com.powsybl.sld.layout.PositionVoltageLevelLayoutFactory;
-import com.powsybl.sld.layout.VoltageLevelLayout;
-import com.powsybl.sld.layout.VoltageLevelLayoutFactory;
-import com.powsybl.sld.layout.positionbyclustering.PositionByClustering;
-import com.powsybl.sld.library.ComponentLibrary;
 import com.powsybl.sld.library.ComponentTypeName;
 import com.powsybl.sld.library.ConvergenceComponentLibrary;
 import com.powsybl.sld.model.FeederNode;
@@ -81,7 +72,8 @@ public class SLDGenerator {
                 Node node;
                 String pathName = ce.getName();
                 if (ce.getCeType() == CEType.DIS) {
-                    node = vlBuilder.createSwitchNode(SwitchKind.DISCONNECTOR, pathName, false, false);
+                    node = vlBuilder.createSwitchNode(SwitchKind.DISCONNECTOR, bay.getName() + " " + pathName, false,
+                            false);
                 } else if (ce.getCeType() == CEType.CBR) {
                     node = vlBuilder.createSwitchNode(SwitchKind.BREAKER, pathName, false, false);
                 } else {
@@ -96,8 +88,8 @@ public class SLDGenerator {
                 } else if (termNb == 2) {
                     node2 = terminalToNode(terminals.get(1));
                 }
-                vlBuilder.connectNode(node1, node2);
-                System.out.println(node1.getId() + "\n" + node2.getId() + "\n");
+                vlBuilder.connectNode(node, node1);
+                vlBuilder.connectNode(node, node2);
             });
         });
     }
@@ -110,13 +102,13 @@ public class SLDGenerator {
         return vlBuilder.createLoad(terminal.getcNodeName());
     }
 
-    public void writeResults(String fileName) {
+    public void computeAndWriteResults(String fileName) {
         VoltageLevelGraph graph = vlBuilder.getGraph();
         LayoutParameters layoutParameters = new LayoutParameters().setAdaptCellHeightToContent(true)
                 .setCssLocation(LayoutParameters.CssLocation.INSERTED_IN_SVG);
 
         new ImplicitCellDetector().detectCells(graph);
-        new BlockOrganizer().organize(graph);
+        new BlockOrganizer(true).organize(graph);
         new PositionVoltageLevelLayout(graph).run(layoutParameters);
 
         StringWriter writer = new StringWriter();

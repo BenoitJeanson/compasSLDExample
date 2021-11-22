@@ -35,4 +35,12 @@ public class Bay {
         return conductingEquipments.stream();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
 }
