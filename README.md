@@ -5,10 +5,10 @@ Quick and dirty PoC on rendering a substation described in a scd. The algorithm 
 Results are found here [./results](results).
 Output Files are json and svg.
 
-One is with the stack option == false
+One is with the stack option = false
 ![./results/test_unstacked.svg](results/test_unstacked.svg)
 
-the other with the stack option == true
+the other with the stack option = true
 
 ![./results/test_stacked.svg](results/test_stacked.svg)
 
