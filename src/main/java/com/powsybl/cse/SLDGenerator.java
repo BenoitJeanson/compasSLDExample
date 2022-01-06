@@ -7,35 +7,31 @@ import java.io.OutputStreamWriter;
 import java.io.StringWriter;
 import java.io.UncheckedIOException;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import com.powsybl.cse.layout.RawDiagramLabelProvider;
+import com.powsybl.cse.layout.SCDComponentLibrary;
+import com.powsybl.cse.layout.SCPGraphBuilder;
+import com.powsybl.cse.layout.SCPGraphBuilder.VoltageLevelBuilder;
 import com.powsybl.cse.model.CEType;
 import com.powsybl.cse.model.Substation;
 import com.powsybl.cse.model.Terminal;
 import com.powsybl.cse.model.VoltageLevel;
-import com.powsybl.sld.RawGraphBuilder;
-import com.powsybl.sld.RawGraphBuilder.VoltageLevelBuilder;
+import com.powsybl.sld.SingleLineDiagram;
 import com.powsybl.sld.layout.BlockOrganizer;
 import com.powsybl.sld.layout.ImplicitCellDetector;
 import com.powsybl.sld.layout.LayoutParameters;
 import com.powsybl.sld.layout.PositionVoltageLevelLayout;
-import com.powsybl.sld.library.ComponentTypeName;
 import com.powsybl.sld.library.ConvergenceComponentLibrary;
-import com.powsybl.sld.model.FeederNode;
 import com.powsybl.sld.model.Node;
 import com.powsybl.sld.model.VoltageLevelGraph;
 import com.powsybl.sld.model.SwitchNode.SwitchKind;
-import com.powsybl.sld.svg.DefaultDiagramStyleProvider;
+import com.powsybl.sld.svg.BasicStyleProvider;
 import com.powsybl.sld.svg.DefaultSVGWriter;
-import com.powsybl.sld.svg.DiagramLabelProvider;
-import com.powsybl.sld.svg.FeederInfo;
-import com.powsybl.sld.svg.LabelPosition;
 
 public class SLDGenerator {
     private Substation substation;
@@ -55,7 +51,7 @@ public class SLDGenerator {
             return;
         }
 
-        vlBuilder = new RawGraphBuilder().createVoltageLevelBuilder(vl.getName(), vl.getVoltage());
+        vlBuilder = new SCPGraphBuilder().createVoltageLevelBuilder(vl.getName(), vl.getVoltage());
 
         vl.gConnectivityNodes().forEach(cn -> {
             String pathName = cn.getPathName();
@@ -76,6 +72,8 @@ public class SLDGenerator {
                             false);
                 } else if (ce.getCeType() == CEType.CBR) {
                     node = vlBuilder.createSwitchNode(SwitchKind.BREAKER, pathName, false, false);
+                } else if (ce.getCeType() == CEType.VTR || ce.getCeType() == CEType.CTR) {
+                    node = vlBuilder.createScpSpecialNode(pathName);
                 } else {
                     node = vlBuilder.createFictitiousNode(pathName);
                 }
@@ -92,6 +90,7 @@ public class SLDGenerator {
                 vlBuilder.connectNode(node, node2);
             });
         });
+
     }
 
     private Node terminalToNode(Terminal terminal) {
@@ -105,7 +104,7 @@ public class SLDGenerator {
     public void computeAndWriteResults(String fileName) {
         VoltageLevelGraph graph = vlBuilder.getGraph();
         LayoutParameters layoutParameters = new LayoutParameters().setAdaptCellHeightToContent(true)
-                .setCssLocation(LayoutParameters.CssLocation.INSERTED_IN_SVG);
+                .setCssLocation(LayoutParameters.CssLocation.INSERTED_IN_SVG).setShowInternalNodes(true);
 
         new ImplicitCellDetector().detectCells(graph);
         new BlockOrganizer(true).organize(graph);
@@ -117,7 +116,7 @@ public class SLDGenerator {
 
         writer = new StringWriter();
         DefaultSVGWriter svgWriter = new DefaultSVGWriter(new ConvergenceComponentLibrary(), layoutParameters);
-        svgWriter.write("", graph, new RawDiagramLabelProvider(graph), new DefaultDiagramStyleProvider(), writer);
+        svgWriter.write("", graph, new RawDiagramLabelProvider(graph), new BasicStyleProvider(), writer);
         writeFile(fileName + ".svg", writer);
     }
 
@@ -128,36 +127,6 @@ public class SLDGenerator {
             fw.write(writer.toString());
         } catch (IOException e) {
             throw new UncheckedIOException(e);
-        }
-    }
-
-    private static class RawDiagramLabelProvider implements DiagramLabelProvider {
-        private final Map<Node, List<NodeLabel>> busLabels;
-
-        public RawDiagramLabelProvider(VoltageLevelGraph graph) {
-            this.busLabels = new HashMap<>();
-            LabelPosition labelPosition = new LabelPosition("default", 0, -5, true, 0);
-            graph.getNodes().forEach(n -> {
-                List<DiagramLabelProvider.NodeLabel> labels = new ArrayList<>();
-                labels.add(new DiagramLabelProvider.NodeLabel(n.getLabel(), labelPosition, null));
-                busLabels.put(n, labels);
-            });
-        }
-
-        @Override
-        public List<FeederInfo> getFeederInfos(FeederNode node) {
-            return Arrays.asList(new FeederInfo(ComponentTypeName.ARROW_ACTIVE, Direction.OUT, "", "tata", null),
-                    new FeederInfo(ComponentTypeName.ARROW_REACTIVE, Direction.IN, "", "tutu", null));
-        }
-
-        @Override
-        public List<NodeLabel> getNodeLabels(Node node) {
-            return busLabels.get(node);
-        }
-
-        @Override
-        public List<NodeDecorator> getNodeDecorators(Node node) {
-            return new ArrayList<>();
         }
     }
 
