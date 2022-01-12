@@ -1,6 +1,8 @@
 package com.powsybl.cse;
 
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXNotRecognizedException;
+import org.xml.sax.SAXNotSupportedException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -18,6 +20,12 @@ public final class SCD2SLD {
     public static void main(String[] args) {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
+        try {
+            factory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        } catch (SAXNotRecognizedException | SAXNotSupportedException | ParserConfigurationException e1) {
+            e1.printStackTrace();
+        }
+
         SCDParser scdParser;
         try {
 

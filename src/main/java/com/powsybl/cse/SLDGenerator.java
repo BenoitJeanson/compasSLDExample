@@ -14,19 +14,17 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.powsybl.cse.layout.RawDiagramLabelProvider;
-import com.powsybl.cse.layout.SCDComponentLibrary;
-import com.powsybl.cse.layout.SCPGraphBuilder;
-import com.powsybl.cse.layout.SCPGraphBuilder.VoltageLevelBuilder;
+import com.powsybl.cse.layout.ScdGraphBuilder;
+import com.powsybl.cse.layout.ScdGraphBuilder.VoltageLevelBuilder;
 import com.powsybl.cse.model.CEType;
 import com.powsybl.cse.model.Substation;
 import com.powsybl.cse.model.Terminal;
 import com.powsybl.cse.model.VoltageLevel;
-import com.powsybl.sld.SingleLineDiagram;
 import com.powsybl.sld.layout.BlockOrganizer;
 import com.powsybl.sld.layout.ImplicitCellDetector;
 import com.powsybl.sld.layout.LayoutParameters;
 import com.powsybl.sld.layout.PositionVoltageLevelLayout;
-import com.powsybl.sld.library.ConvergenceComponentLibrary;
+import com.powsybl.sld.library.ResourcesComponentLibrary;
 import com.powsybl.sld.model.Node;
 import com.powsybl.sld.model.VoltageLevelGraph;
 import com.powsybl.sld.model.SwitchNode.SwitchKind;
@@ -51,7 +49,7 @@ public class SLDGenerator {
             return;
         }
 
-        vlBuilder = new SCPGraphBuilder().createVoltageLevelBuilder(vl.getName(), vl.getVoltage());
+        vlBuilder = new ScdGraphBuilder().createVoltageLevelBuilder(vl.getName(), vl.getVoltage());
 
         vl.gConnectivityNodes().forEach(cn -> {
             String pathName = cn.getPathName();
@@ -62,34 +60,32 @@ public class SLDGenerator {
             }
         });
 
-        vl.getBays().forEach(bay -> {
-            bay.getConductingEquipmentStream().forEach(ce -> {
-                List<Terminal> terminals = ce.getTerminalsStream().collect(Collectors.toList());
-                Node node;
-                String pathName = ce.getName();
-                if (ce.getCeType() == CEType.DIS) {
-                    node = vlBuilder.createSwitchNode(SwitchKind.DISCONNECTOR, bay.getName() + " " + pathName, false,
-                            false);
-                } else if (ce.getCeType() == CEType.CBR) {
-                    node = vlBuilder.createSwitchNode(SwitchKind.BREAKER, pathName, false, false);
-                } else if (ce.getCeType() == CEType.VTR || ce.getCeType() == CEType.CTR) {
-                    node = vlBuilder.createScpSpecialNode(pathName);
-                } else {
-                    node = vlBuilder.createFictitiousNode(pathName);
-                }
+        vl.getBays().forEach(bay -> bay.getConductingEquipmentStream().forEach(ce -> {
+            List<Terminal> terminals = ce.getTerminalsStream().collect(Collectors.toList());
+            Node node;
+            String pathName = ce.getName();
+            if (ce.getCeType() == CEType.DIS) {
+                node = vlBuilder.createSwitchNode(SwitchKind.DISCONNECTOR, bay.getName() + " " + pathName, false,
+                        false);
+            } else if (ce.getCeType() == CEType.CBR) {
+                node = vlBuilder.createSwitchNode(SwitchKind.BREAKER, pathName, false, false);
+            } else if (ce.getCeType() == CEType.VTR || ce.getCeType() == CEType.CTR) {
+                node = vlBuilder.createScpSpecialNode(pathName, ce.getCeType().getTypeName());
+            } else {
+                node = vlBuilder.createFictitiousNode(pathName);
+            }
 
-                Node node1 = terminalToNode(terminals.get(0));
-                Node node2 = null;
-                double termNb = terminals.size();
-                if (termNb == 1) {
-                    node2 = vlBuilder.createLoad(pathName);
-                } else if (termNb == 2) {
-                    node2 = terminalToNode(terminals.get(1));
-                }
-                vlBuilder.connectNode(node, node1);
-                vlBuilder.connectNode(node, node2);
-            });
-        });
+            Node node1 = terminalToNode(terminals.get(0));
+            Node node2 = null;
+            double termNb = terminals.size();
+            if (termNb == 1) {
+                node2 = vlBuilder.createLoad(pathName);
+            } else if (termNb == 2) {
+                node2 = terminalToNode(terminals.get(1));
+            }
+            vlBuilder.connectNode(node, node1);
+            vlBuilder.connectNode(node, node2);
+        }));
 
     }
 
@@ -115,7 +111,8 @@ public class SLDGenerator {
         writeFile(fileName + ".json", writer);
 
         writer = new StringWriter();
-        DefaultSVGWriter svgWriter = new DefaultSVGWriter(new ConvergenceComponentLibrary(), layoutParameters);
+        DefaultSVGWriter svgWriter = new DefaultSVGWriter(
+                new ResourcesComponentLibrary("SCD", "/ConvergenceLibrary", "/ScdComponentsLibrary"), layoutParameters);
         svgWriter.write("", graph, new RawDiagramLabelProvider(graph), new BasicStyleProvider(), writer);
         writeFile(fileName + ".svg", writer);
     }
@@ -129,5 +126,4 @@ public class SLDGenerator {
             throw new UncheckedIOException(e);
         }
     }
-
 }

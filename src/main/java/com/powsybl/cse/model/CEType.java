@@ -9,7 +9,7 @@ public enum CEType {
         this.typeName = typeName;
     }
 
-    static CEType getCEType(String strType) {
+    public static CEType getCEType(String strType) {
         switch (strType) {
             case "DIS":
                 return DIS;
@@ -21,5 +21,9 @@ public enum CEType {
                 return VTR;
         }
         return null;
+    }
+
+    public String getTypeName() {
+        return typeName;
     }
 }

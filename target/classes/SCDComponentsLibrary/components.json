@@ -1,0 +1,58 @@
+{
+    "components": [
+        {
+            "type": "VTR",
+            "anchorPoints": [
+                {
+                    "x": 0.0,
+                    "y": -10.0,
+                    "orientation": "VERTICAL"
+                },
+                {
+                    "x": 0.0,
+                    "y": 10.0,
+                    "orientation": "VERTICAL"
+                }
+            ],
+            "size": {
+                "width": 20.0,
+                "height": 20.0
+            },
+            "allowRotation": true,
+            "subComponents": [
+                {
+                    "name": "VTR",
+                    "fileName": "vtr.svg"
+                }
+            ],
+            "styleClass": "sld-vtr"
+        },
+        {
+            "type": "CTR",
+            "anchorPoints": [
+                {
+                    "x": 0.0,
+                    "y": -10.0,
+                    "orientation": "VERTICAL"
+                },
+                {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "orientation": "VERTICAL"
+                }
+            ],
+            "size": {
+                "width": 20.0,
+                "height": 20.0
+            },
+            "allowRotation": true,
+            "subComponents": [
+                {
+                    "name": "CTR",
+                    "fileName": "ctr.svg"
+                }
+            ],
+            "styleClass": "sld-ctr"
+        }]
+
+    }

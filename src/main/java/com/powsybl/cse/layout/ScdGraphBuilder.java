@@ -28,7 +28,7 @@ import com.powsybl.sld.model.VoltageLevelInfos;
 import com.powsybl.sld.model.ZoneGraph;
 import static com.powsybl.sld.model.FeederWithSideNode.Side.*;
 
-public class SCPGraphBuilder implements GraphBuilder {
+public class ScdGraphBuilder implements GraphBuilder {
 
     private final Map<String, VoltageLevelBuilder> vlBuilders = new TreeMap<>();
     private final Map<String, SubstationBuilder> ssBuilders = new TreeMap<>();
@@ -126,8 +126,8 @@ public class SCPGraphBuilder implements GraphBuilder {
             return fictitiousNode;
         }
 
-        public Node createScpSpecialNode(String id) {
-            Node scpNode = new ScpSpecialNode(id, "VTR", graph);
+        public ScdSpecialNode createScpSpecialNode(String id, String componentType) {
+            ScdSpecialNode scpNode = new ScdSpecialNode(id, componentType, graph);
             graph.addNode(scpNode);
             return scpNode;
         }

@@ -8,7 +8,6 @@ import com.powsybl.cse.model.Terminal;
 import com.powsybl.cse.model.VoltageLevel;
 
 import org.xml.sax.Attributes;
-// import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class SCDParser extends DefaultHandler {
@@ -91,16 +90,7 @@ public class SCDParser extends DefaultHandler {
     // or they may split it into several chunks
     @Override
     public void characters(char[] ch, int start, int length) {
-
-        // The characters() method can be called multiple times for a single text node.
-        // Some values may missing if assign to a new string
-
-        // avoid doing this
-        // value = new String(ch, start, length);
-
-        // better append it, works for single or multiple calls
         currentValue.append(ch, start, length);
-
     }
 
 }
