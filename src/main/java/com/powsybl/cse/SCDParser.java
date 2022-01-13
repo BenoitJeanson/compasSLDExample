@@ -41,24 +41,24 @@ public class SCDParser extends DefaultHandler {
 
         if (qName.equals("VoltageLevel")) {
             currentVoltageLevel = new VoltageLevel(attributes.getValue("name"), attributes.getValue("desc"), 20,
-                    gSyx(attributes, "x"), gSyx(attributes, "y"));
+                    gSyx(attributes, "sxy:x"), gSyx(attributes, "sxy:y"));
             currentSubstation.addVoltageLevel(currentVoltageLevel);
         }
 
         if (qName.equals("Bay")) {
-            currentBay = new Bay(attributes.getValue("name"), attributes.getValue("desc"), gSyx(attributes, "x"),
-                    gSyx(attributes, "y"));
+            currentBay = new Bay(attributes.getValue("name"), attributes.getValue("desc"), gSyx(attributes, "sxy:x"),
+                    gSyx(attributes, "sxy:y"));
             currentVoltageLevel.addBay(currentBay);
         }
 
         if (qName.equals("ConnectivityNode")) {
             currentBay.addConnectivityNode(
-                    new ConnectivityNode(attributes.getValue("pathName"), attributes.getValue("name")));
+                    new ConnectivityNode(attributes.getValue("pathName"), attributes.getValue("name"), currentBay));
         }
 
         if (qName.equals("ConductingEquipment")) {
             currentConductingEquipment = new ConductingEquipment(attributes.getValue("type"),
-                    attributes.getValue("name"), gSyx(attributes, "x"), gSyx(attributes, "y"));
+                    attributes.getValue("name"), gSyx(attributes, "sxy:x"), gSyx(attributes, "sxy:y"));
             currentBay.addConductingEquipments(currentConductingEquipment);
         }
 
@@ -69,8 +69,7 @@ public class SCDParser extends DefaultHandler {
     }
 
     private int gSyx(Attributes attributes, String xy) {
-        // TODO : to develop
-        return 0;
+        return Integer.parseInt(attributes.getValue(xy));
     }
 
     @Override

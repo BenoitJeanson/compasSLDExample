@@ -43,4 +43,12 @@ public class Bay {
         return desc;
     }
 
+    public int getSxyX() {
+        return sxyX;
+    }
+
+    public int getSxyY() {
+        return sxyY;
+    }
+
 }

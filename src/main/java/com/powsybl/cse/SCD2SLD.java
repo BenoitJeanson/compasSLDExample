@@ -40,7 +40,7 @@ public final class SCD2SLD {
         }
         SLDGenerator sldGenerator = new SLDGenerator(scdParser.getSubstation());
         sldGenerator.buildSldGraph();
-        sldGenerator.computeAndWriteResults("test");
+        sldGenerator.computeAndWriteResults("test", true, true);
     }
 
 }
