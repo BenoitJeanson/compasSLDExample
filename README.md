@@ -39,7 +39,7 @@ And for the Feeder `scdGraphBuilder::createLoad`:
 
 
 with the stack option = true
-![./results/test_stacked.svg](results/test_ExplicitPosition_stacked.svg)
+![./results/test_ExplicitPosition_stacked.svg](results/test_ExplicitPosition_stacked.svg)
 
 ## Road Map
 - Done: parsing to create a corresponding graph.
