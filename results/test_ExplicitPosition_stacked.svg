@@ -64,56 +64,177 @@
             <text class="sld-label" id="AA1/J1/BusBar B/L1_default" text-anchor="middle" x="0.0" y="-5.0">AA1/J1/BusBar B/L1</text>
         </g>
         <g class="cell idINTERN_32_0" id="idINTERN_32_0">
-            <g class="sld-node" id="idINTERNAL_95_J1_95_CoupField_32_QB2" transform="translate(111.0,263.0)">
+            <g class="sld-node" id="idINTERNAL_95_J1_95_CoupField_32_QB2" transform="translate(311.0,263.0)">
                 <circle cx="4" cy="4" r="4"/>
                 <text class="sld-label" id="INTERNAL_J1_CoupField QB2_default" text-anchor="middle" x="0.0" y="-5.0"/>
             </g>
-            <g class="sld-node" id="idINTERNAL_95_J1_95_CoupField_32_QB1" transform="translate(61.0,263.0)">
+            <g class="sld-node" id="idINTERNAL_95_J1_95_CoupField_32_QB1" transform="translate(261.0,263.0)">
                 <circle cx="4" cy="4" r="4"/>
                 <text class="sld-label" id="INTERNAL_J1_CoupField QB1_default" text-anchor="middle" x="0.0" y="-5.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_CoupField_32_QB2_95_AA1_47_J1_47_BusBar_32_A_47_L1">
-                <polyline points="115.0,307.0,115.0,307.0"/>
+                <polyline points="315.0,307.0,315.0,307.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_CoupField_32_QB2_95_INTERNAL_95_J1_95_CoupField_32_QB2">
-                <polyline points="115.0,307.0,115.0,267.0"/>
+                <polyline points="315.0,307.0,315.0,267.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_QA1_95_INTERNAL_95_J1_95_CoupField_32_QB2">
-                <polyline points="100.0,267.0,115.0,267.0"/>
+                <polyline points="300.0,267.0,315.0,267.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_QA1_95_INTERNAL_95_J1_95_CoupField_32_QB1">
-                <polyline points="80.0,267.0,65.0,267.0"/>
+                <polyline points="280.0,267.0,265.0,267.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_CoupField_32_QB1_95_INTERNAL_95_J1_95_CoupField_32_QB1">
-                <polyline points="65.0,332.0,65.0,267.0"/>
+                <polyline points="265.0,332.0,265.0,267.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_CoupField_32_QB1_95_AA1_47_J1_47_BusBar_32_B_47_L1">
-                <polyline points="65.0,332.0,65.0,332.0"/>
+                <polyline points="265.0,332.0,265.0,332.0"/>
             </g>
-            <g class="sld-disconnector sld-closed" id="idCoupField_32_QB2" transform="translate(111.0,303.0)">
+            <g class="sld-disconnector sld-closed" id="idCoupField_32_QB2" transform="translate(311.0,303.0)">
                 <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
                 <path class="sld-sw-open" d="M8,0 0,8"/>
                 <text class="sld-label" id="CoupField QB2_default" text-anchor="middle" x="0.0" y="-5.0">CoupField QB2</text>
             </g>
-            <g class="sld-breaker sld-closed" id="idQA1" transform="translate(80.0,257.0)">
+            <g class="sld-breaker sld-closed" id="idQA1" transform="translate(280.0,257.0)">
                 <path class="sld-sw-closed" d="M1,1 V19 H19 V1z M10,5 V15" transform="rotate(90.0,10.0,10.0)"/>
                 <path class="sld-sw-open" d="M1,1 V19 H19 V1z M5,10 H15" transform="rotate(90.0,10.0,10.0)"/>
                 <text class="sld-label" id="QA1_default" text-anchor="middle" x="0.0" y="-5.0">QA1</text>
             </g>
-            <g class="sld-disconnector sld-closed" id="idCoupField_32_QB1" transform="translate(61.0,328.0)">
+            <g class="sld-disconnector sld-closed" id="idCoupField_32_QB1" transform="translate(261.0,328.0)">
                 <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
                 <path class="sld-sw-open" d="M8,0 0,8"/>
                 <text class="sld-label" id="CoupField QB1_default" text-anchor="middle" x="0.0" y="-5.0">CoupField QB1</text>
             </g>
         </g>
         <g class="cell idEXTERN_32_1" id="idEXTERN_32_1">
-            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1" transform="translate(186.0,273.0)">
+            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1" transform="translate(86.0,273.0)">
                 <circle cx="4" cy="4" r="4"/>
                 <text class="sld-label" id="INTERNAL_J1_AA1/J1/Bay A/L1_default" text-anchor="middle" x="0.0" y="-5.0"/>
             </g>
-            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3" transform="translate(186.0,192.0)">
+            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3" transform="translate(86.0,192.0)">
                 <circle cx="4" cy="4" r="4"/>
                 <text class="sld-label" id="INTERNAL_J1_AA1/J1/Bay A/L3_default" text-anchor="middle" x="0.0" y="-5.0"/>
+            </g>
+            <g class="sld-node" id="idINTERNAL_95_J1_95_T5" transform="translate(111.0,138.0)">
+                <circle cx="4" cy="4" r="4"/>
+                <text class="sld-label" id="INTERNAL_J1_T5_default" text-anchor="middle" x="0.0" y="-5.0"/>
+            </g>
+            <g class="sld-load sld-top-feeder" id="idT5" transform="translate(107.0,75.5)">
+                <rect height="9" width="16"/>
+                <line x1="0" x2="16" y1="0" y2="9"/>
+                <line x1="16" x2="0" y1="0" y2="9"/>
+                <text class="sld-label" id="T5_default" text-anchor="middle" x="0.0" y="-5.0">T5</text>
+            </g>
+            <g class="sld-node" id="idINTERNAL_95_J1_95_QB9" transform="translate(61.0,138.0)">
+                <circle cx="4" cy="4" r="4"/>
+                <text class="sld-label" id="INTERNAL_J1_QB9_default" text-anchor="middle" x="0.0" y="-5.0"/>
+            </g>
+            <g class="sld-load sld-top-feeder" id="idQB9" transform="translate(57.0,75.5)">
+                <rect height="9" width="16"/>
+                <line x1="0" x2="16" y1="0" y2="9"/>
+                <line x1="16" x2="0" y1="0" y2="9"/>
+                <text class="sld-label" id="QB9_default" text-anchor="middle" x="0.0" y="-5.0">QB9</text>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB2_95_AA1_47_J1_47_BusBar_32_A_47_L1">
+                <polyline points="90.0,307.0,65.0,307.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB2_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1">
+                <polyline points="90.0,307.0,90.0,277.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1">
+                <polyline points="90.0,332.0,90.0,277.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_QA1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1">
+                <polyline points="90.0,260.0,90.0,277.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB1_95_AA1_47_J1_47_BusBar_32_B_47_L1">
+                <polyline points="90.0,332.0,65.0,332.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_QA1_95_T1">
+                <polyline points="90.0,240.0,90.0,223.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_T1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3">
+                <polyline points="90.0,213.0,90.0,196.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3">
+                <polyline points="115.0,179.0,115.0,196.0,90.0,196.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB9_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3">
+                <polyline points="65.0,169.0,65.0,196.0,90.0,196.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_T5">
+                <polyline points="115.0,159.0,115.0,142.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_INTERNAL_95_J1_95_T5_95_T5">
+                <polyline points="115.0,142.0,115.0,84.5"/>
+            </g>
+            <g class="sld-arrow-p sld-out" id="idT5_ARROW_ACTIVE" transform="translate(110.0,98.25)">
+                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
+                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
+                <text class="sld-label" x="15.0" y="5.0">tata</text>
+                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
+            </g>
+            <g class="sld-arrow-q sld-in" id="idT5_ARROW_REACTIVE" transform="translate(110.0,118.25)">
+                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
+                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
+                <text class="sld-label" x="15.0" y="5.0">tutu</text>
+                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB9_95_INTERNAL_95_J1_95_QB9">
+                <polyline points="65.0,169.0,65.0,142.0"/>
+            </g>
+            <g class="sld-wire" id="_95_J1_95_INTERNAL_95_J1_95_QB9_95_QB9">
+                <polyline points="65.0,142.0,65.0,84.5"/>
+            </g>
+            <g class="sld-arrow-p sld-out" id="idQB9_ARROW_ACTIVE" transform="translate(60.0,98.25)">
+                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
+                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
+                <text class="sld-label" x="15.0" y="5.0">tata</text>
+                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
+            </g>
+            <g class="sld-arrow-q sld-in" id="idQB9_ARROW_REACTIVE" transform="translate(60.0,118.25)">
+                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
+                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
+                <text class="sld-label" x="15.0" y="5.0">tutu</text>
+                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
+            </g>
+            <g class="sld-disconnector sld-closed" id="idBay_32_A_32_QB2" transform="translate(86.0,303.0)">
+                <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
+                <path class="sld-sw-open" d="M8,0 0,8"/>
+                <text class="sld-label" id="Bay A QB2_default" text-anchor="middle" x="0.0" y="-5.0">Bay A QB2</text>
+            </g>
+            <g class="sld-disconnector sld-closed" id="idBay_32_A_32_QB1" transform="translate(86.0,328.0)">
+                <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
+                <path class="sld-sw-open" d="M8,0 0,8"/>
+                <text class="sld-label" id="Bay A QB1_default" text-anchor="middle" x="0.0" y="-5.0">Bay A QB1</text>
+            </g>
+            <g class="sld-breaker sld-closed" id="idQA1" transform="translate(80.0,240.0)">
+                <path class="sld-sw-closed" d="M1,1 V19 H19 V1z M10,5 V15"/>
+                <path class="sld-sw-open" d="M1,1 V19 H19 V1z M5,10 H15"/>
+                <text class="sld-label" id="QA1_default" text-anchor="middle" x="0.0" y="-5.0">QA1</text>
+            </g>
+            <g class="sld-ctr sld-open" id="idT1" transform="translate(80.0,213.0)">
+                <path d="M 10 1 l 9 9 l 0 9 l -9 -9 l -9 9 l 0 -9 l 9 -9"/>
+                <text class="sld-label" id="T1_default" text-anchor="middle" x="0.0" y="-5.0">T1</text>
+            </g>
+            <g class="sld-vtr sld-open" id="idT5" transform="translate(105.0,159.0)">
+                <path d="M 10 1 l 9 9 l 0 9 l -18 0 l 0 -9"/>
+                <text class="sld-label" id="T5_default" text-anchor="middle" x="0.0" y="-5.0">T5</text>
+            </g>
+            <g class="sld-disconnector sld-closed" id="idBay_32_A_32_QB9" transform="translate(61.0,165.0)">
+                <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
+                <path class="sld-sw-open" d="M8,0 0,8"/>
+                <text class="sld-label" id="Bay A QB9_default" text-anchor="middle" x="0.0" y="-5.0">Bay A QB9</text>
+            </g>
+        </g>
+        <g class="cell idEXTERN_32_2" id="idEXTERN_32_2">
+            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1" transform="translate(186.0,273.0)">
+                <circle cx="4" cy="4" r="4"/>
+                <text class="sld-label" id="INTERNAL_J1_AA1/J1/Bay B/L1_default" text-anchor="middle" x="0.0" y="-5.0"/>
+            </g>
+            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3" transform="translate(186.0,192.0)">
+                <circle cx="4" cy="4" r="4"/>
+                <text class="sld-label" id="INTERNAL_J1_AA1/J1/Bay B/L3_default" text-anchor="middle" x="0.0" y="-5.0"/>
             </g>
             <g class="sld-node" id="idINTERNAL_95_J1_95_T5" transform="translate(211.0,138.0)">
                 <circle cx="4" cy="4" r="4"/>
@@ -135,31 +256,31 @@
                 <line x1="16" x2="0" y1="0" y2="9"/>
                 <text class="sld-label" id="QB9_default" text-anchor="middle" x="0.0" y="-5.0">QB9</text>
             </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB2_95_AA1_47_J1_47_BusBar_32_A_47_L1">
+            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB2_95_AA1_47_J1_47_BusBar_32_A_47_L1">
                 <polyline points="190.0,307.0,165.0,307.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB2_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1">
+            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB2_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1">
                 <polyline points="190.0,307.0,190.0,277.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1">
+            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1">
                 <polyline points="190.0,332.0,190.0,277.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_QA1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L1">
+            <g class="sld-wire" id="_95_J1_95_QA1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1">
                 <polyline points="190.0,260.0,190.0,277.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB1_95_AA1_47_J1_47_BusBar_32_B_47_L1">
+            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB1_95_AA1_47_J1_47_BusBar_32_B_47_L1">
                 <polyline points="190.0,332.0,165.0,332.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_QA1_95_T1">
                 <polyline points="190.0,240.0,190.0,223.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_T1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3">
+            <g class="sld-wire" id="_95_J1_95_T1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3">
                 <polyline points="190.0,213.0,190.0,196.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3">
+            <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3">
                 <polyline points="215.0,179.0,215.0,196.0,190.0,196.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB9_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_A_47_L3">
+            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB9_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3">
                 <polyline points="165.0,169.0,165.0,196.0,190.0,196.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_T5">
@@ -180,7 +301,7 @@
                 <text class="sld-label" x="15.0" y="5.0">tutu</text>
                 <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
             </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_A_32_QB9_95_INTERNAL_95_J1_95_QB9">
+            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB9_95_INTERNAL_95_J1_95_QB9">
                 <polyline points="165.0,169.0,165.0,142.0"/>
             </g>
             <g class="sld-wire" id="_95_J1_95_INTERNAL_95_J1_95_QB9_95_QB9">
@@ -198,15 +319,15 @@
                 <text class="sld-label" x="15.0" y="5.0">tutu</text>
                 <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
             </g>
-            <g class="sld-disconnector sld-closed" id="idBay_32_A_32_QB2" transform="translate(186.0,303.0)">
+            <g class="sld-disconnector sld-closed" id="idBay_32_B_32_QB2" transform="translate(186.0,303.0)">
                 <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
                 <path class="sld-sw-open" d="M8,0 0,8"/>
-                <text class="sld-label" id="Bay A QB2_default" text-anchor="middle" x="0.0" y="-5.0">Bay A QB2</text>
+                <text class="sld-label" id="Bay B QB2_default" text-anchor="middle" x="0.0" y="-5.0">Bay B QB2</text>
             </g>
-            <g class="sld-disconnector sld-closed" id="idBay_32_A_32_QB1" transform="translate(186.0,328.0)">
+            <g class="sld-disconnector sld-closed" id="idBay_32_B_32_QB1" transform="translate(186.0,328.0)">
                 <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
                 <path class="sld-sw-open" d="M8,0 0,8"/>
-                <text class="sld-label" id="Bay A QB1_default" text-anchor="middle" x="0.0" y="-5.0">Bay A QB1</text>
+                <text class="sld-label" id="Bay B QB1_default" text-anchor="middle" x="0.0" y="-5.0">Bay B QB1</text>
             </g>
             <g class="sld-breaker sld-closed" id="idQA1" transform="translate(180.0,240.0)">
                 <path class="sld-sw-closed" d="M1,1 V19 H19 V1z M10,5 V15"/>
@@ -221,128 +342,7 @@
                 <path d="M 10 1 l 9 9 l 0 9 l -18 0 l 0 -9"/>
                 <text class="sld-label" id="T5_default" text-anchor="middle" x="0.0" y="-5.0">T5</text>
             </g>
-            <g class="sld-disconnector sld-closed" id="idBay_32_A_32_QB9" transform="translate(161.0,165.0)">
-                <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
-                <path class="sld-sw-open" d="M8,0 0,8"/>
-                <text class="sld-label" id="Bay A QB9_default" text-anchor="middle" x="0.0" y="-5.0">Bay A QB9</text>
-            </g>
-        </g>
-        <g class="cell idEXTERN_32_2" id="idEXTERN_32_2">
-            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1" transform="translate(286.0,273.0)">
-                <circle cx="4" cy="4" r="4"/>
-                <text class="sld-label" id="INTERNAL_J1_AA1/J1/Bay B/L1_default" text-anchor="middle" x="0.0" y="-5.0"/>
-            </g>
-            <g class="sld-node" id="idINTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3" transform="translate(286.0,192.0)">
-                <circle cx="4" cy="4" r="4"/>
-                <text class="sld-label" id="INTERNAL_J1_AA1/J1/Bay B/L3_default" text-anchor="middle" x="0.0" y="-5.0"/>
-            </g>
-            <g class="sld-node" id="idINTERNAL_95_J1_95_T5" transform="translate(311.0,138.0)">
-                <circle cx="4" cy="4" r="4"/>
-                <text class="sld-label" id="INTERNAL_J1_T5_default" text-anchor="middle" x="0.0" y="-5.0"/>
-            </g>
-            <g class="sld-load sld-top-feeder" id="idT5" transform="translate(307.0,75.5)">
-                <rect height="9" width="16"/>
-                <line x1="0" x2="16" y1="0" y2="9"/>
-                <line x1="16" x2="0" y1="0" y2="9"/>
-                <text class="sld-label" id="T5_default" text-anchor="middle" x="0.0" y="-5.0">T5</text>
-            </g>
-            <g class="sld-node" id="idINTERNAL_95_J1_95_QB9" transform="translate(261.0,138.0)">
-                <circle cx="4" cy="4" r="4"/>
-                <text class="sld-label" id="INTERNAL_J1_QB9_default" text-anchor="middle" x="0.0" y="-5.0"/>
-            </g>
-            <g class="sld-load sld-top-feeder" id="idQB9" transform="translate(257.0,75.5)">
-                <rect height="9" width="16"/>
-                <line x1="0" x2="16" y1="0" y2="9"/>
-                <line x1="16" x2="0" y1="0" y2="9"/>
-                <text class="sld-label" id="QB9_default" text-anchor="middle" x="0.0" y="-5.0">QB9</text>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB2_95_AA1_47_J1_47_BusBar_32_A_47_L1">
-                <polyline points="290.0,307.0,265.0,307.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB2_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1">
-                <polyline points="290.0,307.0,290.0,277.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1">
-                <polyline points="290.0,332.0,290.0,277.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_QA1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L1">
-                <polyline points="290.0,260.0,290.0,277.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB1_95_AA1_47_J1_47_BusBar_32_B_47_L1">
-                <polyline points="290.0,332.0,265.0,332.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_QA1_95_T1">
-                <polyline points="290.0,240.0,290.0,223.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_T1_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3">
-                <polyline points="290.0,213.0,290.0,196.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3">
-                <polyline points="315.0,179.0,315.0,196.0,290.0,196.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB9_95_INTERNAL_95_J1_95_AA1_47_J1_47_Bay_32_B_47_L3">
-                <polyline points="265.0,169.0,265.0,196.0,290.0,196.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_T5_95_INTERNAL_95_J1_95_T5">
-                <polyline points="315.0,159.0,315.0,142.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_INTERNAL_95_J1_95_T5_95_T5">
-                <polyline points="315.0,142.0,315.0,84.5"/>
-            </g>
-            <g class="sld-arrow-p sld-out" id="idT5_ARROW_ACTIVE" transform="translate(310.0,98.25)">
-                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
-                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
-                <text class="sld-label" x="15.0" y="5.0">tata</text>
-                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
-            </g>
-            <g class="sld-arrow-q sld-in" id="idT5_ARROW_REACTIVE" transform="translate(310.0,118.25)">
-                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
-                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
-                <text class="sld-label" x="15.0" y="5.0">tutu</text>
-                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_Bay_32_B_32_QB9_95_INTERNAL_95_J1_95_QB9">
-                <polyline points="265.0,169.0,265.0,142.0"/>
-            </g>
-            <g class="sld-wire" id="_95_J1_95_INTERNAL_95_J1_95_QB9_95_QB9">
-                <polyline points="265.0,142.0,265.0,84.5"/>
-            </g>
-            <g class="sld-arrow-p sld-out" id="idQB9_ARROW_ACTIVE" transform="translate(260.0,98.25)">
-                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
-                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
-                <text class="sld-label" x="15.0" y="5.0">tata</text>
-                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
-            </g>
-            <g class="sld-arrow-q sld-in" id="idQB9_ARROW_REACTIVE" transform="translate(260.0,118.25)">
-                <polygon class="sld-arrow-in" points="0,0 10,0 5,10"/>
-                <polygon class="sld-arrow-out" points="5,0 10,10 0,10"/>
-                <text class="sld-label" x="15.0" y="5.0">tutu</text>
-                <text class="sld-label" style="text-anchor:end" x="-5.0" y="5.0"/>
-            </g>
-            <g class="sld-disconnector sld-closed" id="idBay_32_B_32_QB2" transform="translate(286.0,303.0)">
-                <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
-                <path class="sld-sw-open" d="M8,0 0,8"/>
-                <text class="sld-label" id="Bay B QB2_default" text-anchor="middle" x="0.0" y="-5.0">Bay B QB2</text>
-            </g>
-            <g class="sld-disconnector sld-closed" id="idBay_32_B_32_QB1" transform="translate(286.0,328.0)">
-                <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
-                <path class="sld-sw-open" d="M8,0 0,8"/>
-                <text class="sld-label" id="Bay B QB1_default" text-anchor="middle" x="0.0" y="-5.0">Bay B QB1</text>
-            </g>
-            <g class="sld-breaker sld-closed" id="idQA1" transform="translate(280.0,240.0)">
-                <path class="sld-sw-closed" d="M1,1 V19 H19 V1z M10,5 V15"/>
-                <path class="sld-sw-open" d="M1,1 V19 H19 V1z M5,10 H15"/>
-                <text class="sld-label" id="QA1_default" text-anchor="middle" x="0.0" y="-5.0">QA1</text>
-            </g>
-            <g class="sld-ctr sld-open" id="idT1" transform="translate(280.0,213.0)">
-                <path d="M 10 1 l 9 9 l 0 9 l -9 -9 l -9 9 l 0 -9 l 9 -9"/>
-                <text class="sld-label" id="T1_default" text-anchor="middle" x="0.0" y="-5.0">T1</text>
-            </g>
-            <g class="sld-vtr sld-open" id="idT5" transform="translate(305.0,159.0)">
-                <path d="M 10 1 l 9 9 l 0 9 l -18 0 l 0 -9"/>
-                <text class="sld-label" id="T5_default" text-anchor="middle" x="0.0" y="-5.0">T5</text>
-            </g>
-            <g class="sld-disconnector sld-closed" id="idBay_32_B_32_QB9" transform="translate(261.0,165.0)">
+            <g class="sld-disconnector sld-closed" id="idBay_32_B_32_QB9" transform="translate(161.0,165.0)">
                 <path class="sld-sw-closed" d="M0,0 8,8 M8,0 0,8"/>
                 <path class="sld-sw-open" d="M8,0 0,8"/>
                 <text class="sld-label" id="Bay B QB9_default" text-anchor="middle" x="0.0" y="-5.0">Bay B QB9</text>
