@@ -33,8 +33,9 @@ When a bay defines a BusBar :
 - `syx:x` is used to define the `BusBarSection` in `scdGraphBuilder::createBusBarSection`
 
 And for the Feeder `scdGraphBuilder::createLoad`:
-- `sxy:x` is used for the `order` of the feeder.
+- `sxy:x` of the parent `Bay` is used for the `order` of the feeder.
 - no usefull information is found for the direction, therefore set to arbitrary value `Direction.TOP`
+- To enable the coupling to be in the same area as the grounded feeder (same bay), `sxy:x` is put as the order of any breaker found. The information is not used for `ExternCell`, but when is used to define the order of an `InternCell`
 
 
 with the stack option = true
