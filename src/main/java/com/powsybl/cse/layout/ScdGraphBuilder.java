@@ -106,6 +106,8 @@ public class ScdGraphBuilder implements GraphBuilder {
         public SwitchNode createSwitchNode(SwitchNode.SwitchKind sk, String id, boolean fictitious, boolean open,
                 int order, BusCell.Direction direction) {
             SwitchNode sw = new SwitchNode(id, id, sk.name(), fictitious, graph, sk, open);
+            sw.setOrder(order);
+            sw.setDirection(direction);
             graph.addNode(sw);
             return sw;
         }

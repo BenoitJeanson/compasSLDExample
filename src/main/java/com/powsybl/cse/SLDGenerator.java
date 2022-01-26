@@ -73,7 +73,8 @@ public class SLDGenerator {
                 node = vlBuilder.createSwitchNode(SwitchKind.DISCONNECTOR, bay.getName() + " " + pathName, false,
                         false);
             } else if (ce.getCeType() == CEType.CBR) {
-                node = vlBuilder.createSwitchNode(SwitchKind.BREAKER, pathName, false, false);
+                node = vlBuilder.createSwitchNode(SwitchKind.BREAKER, pathName, false, false, bay.getSxyX(),
+                        Direction.TOP);
             } else if (ce.getCeType() == CEType.VTR || ce.getCeType() == CEType.CTR) {
                 node = vlBuilder.createScpSpecialNode(pathName, ce.getCeType().getTypeName());
             } else {
